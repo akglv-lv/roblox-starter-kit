@@ -63,7 +63,13 @@ if (Has "rokit") {
 # 5) Rojo plugin inside Studio
 $plugin = Join-Path $env:LOCALAPPDATA "Roblox\Plugins\RojoManagedPlugin.rbxm"
 if (Test-Path $plugin) { Note "OK" "Rojo plugin" "installed in Studio" }
-elseif ((Has "rojo") -and -not $Check) { rojo plugin install 2>&1 | Out-Null; Note "OK" "Rojo plugin" "installed (restart Studio if it's open)" }
+elseif ((Has "rojo") -and -not $Check) {
+    New-Item -ItemType Directory -Force (Split-Path $plugin) | Out-Null
+    $out = rojo plugin install 2>&1 | Out-String
+    if (Test-Path $plugin) { Note "OK" "Rojo plugin" "installed. CLOSE and reopen Roblox Studio so it shows up." }
+    else { Note "FAIL" "Rojo plugin" "didn't install: $($out.Trim())" }
+}
+elseif (-not $Check) { Note "FAIL" "Rojo plugin" "rojo is missing, so the plugin can't be installed yet. Run this again in a new window." }
 
 # 6) Your name for saved versions
 if (Has "git") {
