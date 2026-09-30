@@ -9,7 +9,7 @@ The dev describes something in their own words (it may be vague: "pets", "make i
 
 ## 1. Understand (keep it quick and friendly)
 - Repeat the idea back in one sentence: "So you want …".
-- If it's unclear, ask **at most 3 short questions**, using the AskUserQuestion tool with 2 to 4 simple options each (they can also type their own answer). Good questions are about what the player SEES and DOES, not code:
+- **Usually ask nothing:** pick sensible defaults and list them in the plan so they can change them after. Only if the idea is truly unclear, ask **at most 2 short questions** in ONE AskUserQuestion call, 2 to 4 simple options each (they can also type their own answer). Good questions are about what the player SEES and DOES, not code:
   - "How does a player get it?" (buy with coins / find on the map / win it / free)
   - "What does it do?"
   - "Where on screen / on the map should it be?"

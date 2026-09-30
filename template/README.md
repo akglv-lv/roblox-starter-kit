@@ -8,6 +8,9 @@ My Roblox game. Scripts live in `src/` and go into Studio through Rojo.
 - `/fix <what's wrong>`: fix a bug
 - `/test`: playtest it
 - `/ship`: get ready to publish
+- `/thumbnail`: make the game icon and thumbnails
+- `/launch-ready`: make it safe for real players before going public
+- `/teamup` / `/grab`: working with a friend
 
 | Folder | What's in it |
 |---|---|

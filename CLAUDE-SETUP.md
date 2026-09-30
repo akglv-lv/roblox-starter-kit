@@ -13,11 +13,16 @@ Rules while doing this:
 
 The kit folder is where this file is (call it `KIT`). All scripts are in `KIT\scripts`.
 
-## 1. Say hi, ask what you need (one message)
-Tell them: "I'll set everything up for you. It takes about 15 minutes, and I'll only ask you to click a few things." Then ask (AskUserQuestion or plain questions):
+**Ask as little as possible.** Every question and every "click this" is work for them. Collect everything you need in ONE round of questions at the start, then run the whole setup without stopping unless something truly needs their hands. Never ask "shall I continue?" or "is that OK?"; just continue.
+
+## 1. Say hi, ask everything at once (one message)
+Tell them: "I'll set everything up for you. It takes about 15 minutes, and I'll only ask you to click a few things."
+Then, right away and only once: "**Tip:** so I don't keep asking permission for every step, click the mode button under the message box and choose **Auto** (or, when a permission box pops up, choose the 'always allow' option)."
+Then ask everything in ONE AskUserQuestion / message:
 - Their **name or nickname** (labels their saved versions).
-- Do they have a **GitHub account**? (free online backup of their games). If not: "Go to https://github.com/signup and make one, then tell me the email you used." Wait.
-- The **email** they used for GitHub.
+- The **email** of their GitHub account, or "no account yet".
+- Is their game **brand-new** or **already started** in Roblox Studio? And its **name**.
+If they have no GitHub account: "Go to https://github.com/signup and make one (free), then tell me the email you used." That's the only thing to wait for here.
 
 ## 2. Check the apps they need
 - **Roblox Studio**: check for `RobloxStudioBeta.exe` under `%LOCALAPPDATA%\Roblox\Versions`. If missing: "Go to https://create.roblox.com, click Start Creating, install Roblox Studio and sign in. Tell me when it's open." Wait.
@@ -34,14 +39,11 @@ Run `gh auth login -h github.com -w -p https -s repo,workflow` **in the backgrou
 "A GitHub page just opened. Type this code: **ABCD-1234**, then click Authorize." Wait for "done", then check `gh auth status`.
 
 ## 5. Let me see Roblox Studio
-Tell them, one step: "In Roblox Studio, click **Assistant** in the top bar, then the **gear** ⚙️ in that panel, and turn **ON** the switch called **MCP server**. Tell me when it's on."
+If `%LOCALAPPDATA%\Roblox\mcp.bat` already exists, the switch is already on: skip to re-running setup silently. Otherwise tell them, one step: "In Roblox Studio, click **Assistant** in the top bar, then the **gear** ⚙️ in that panel, and turn **ON** the switch called **MCP server**. Tell me when it's on."
 Then check `%LOCALAPPDATA%\Roblox\mcp.bat` exists and re-run the setup script from step 3 (it registers Studio with the Claude app). If the switch has moved in a newer Studio, help them find it (search Studio's settings for "MCP").
 
 ## 6. Make their game folder
-Ask (AskUserQuestion):
-- "Is this a **brand-new** game, or one you **already started** in Roblox Studio (like with a friend)?"
-- The game's **name**.
-Run:
+Use the answers from step 1 (don't ask again). Run:
 ```
 powershell -NoProfile -ExecutionPolicy Bypass -File "KIT\scripts\new-game.ps1" -Name "<game name>" -Mode <1 for new, 2 for already started>
 ```

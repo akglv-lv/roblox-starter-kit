@@ -2,7 +2,7 @@
 
 You don't need to know code. Just say what you want **the player to see and do**. Claude asks if it needs more.
 
-## The 7 commands
+## The commands
 | Type this | When |
 |---|---|
 | `/start` | The very first time in a new game |
@@ -12,6 +12,8 @@ You don't need to know code. Just say what you want **the player to see and do**
 | `/ship` | You want to publish an update to Roblox |
 | `/teamup` | You're making the game with a friend |
 | `/grab` | Your friend made a script in Studio and you want it saved |
+| `/thumbnail` | Make your game icon and thumbnails |
+| `/launch-ready` | Before your game goes public: makes saving and purchases safe for real players |
 
 You can also just talk normally. "Can you add…" works the same as `/idea`.
 
@@ -63,7 +65,8 @@ Say **what you did**, **what you expected**, **what happened**:
 - "Explain how the coins script works, simply."
 - "Make the game easier at the start." / "Make upgrades cost more."
 - "Undo the last thing you did."
-- "Make me a game icon idea." / "Write my game description for Roblox."
+- "Find me a free tree model." / "Make a lava texture." (Claude can search Roblox's free models and generate new ones)
+- "Write my game description for Roblox."
 - "What does my game need before I publish it?"
 
 ## Tips

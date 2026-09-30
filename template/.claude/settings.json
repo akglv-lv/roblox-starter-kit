@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "mcp__Roblox_Studio",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(rojo *)",
+      "Bash(selene *)",
+      "Bash(stylua *)",
+      "Bash(lune *)",
+      "Bash(rokit *)",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File scripts*)",
+      "PowerShell(git *)",
+      "PowerShell(gh *)",
+      "PowerShell(rojo *)",
+      "PowerShell(selene *)",
+      "PowerShell(stylua *)",
+      "PowerShell(lune *)",
+      "PowerShell(rokit *)",
+      "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File scripts*)"
+    ]
+  }
+}
