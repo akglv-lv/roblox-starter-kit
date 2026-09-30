@@ -1,0 +1,29 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # installs the exact tool versions pinned in rokit.toml (rojo, selene, stylua, lune)
+      - uses: CompeyDev/setup-rokit@v0.1.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint
+        run: selene src --allow-warnings
+
+      - name: Formatting
+        run: stylua --check src tests
+
+      - name: Config tests
+        run: lune run tests/config
+
+      - name: Rojo build
+        run: rojo build -o build.rbxl

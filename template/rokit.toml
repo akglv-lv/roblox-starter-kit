@@ -1,0 +1,7 @@
+# This file lists tools managed by Rokit (installs Rojo, Selene, StyLua and Lune at these exact versions).
+
+[tools]
+rojo = "rojo-rbx/rojo@7.7.0"
+selene = "Kampfkarren/selene@0.31.0"
+StyLua = "JohnnyMorganz/StyLua@2.5.2"
+lune = "lune-org/lune@0.10.5"

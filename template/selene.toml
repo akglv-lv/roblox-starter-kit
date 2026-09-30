@@ -1,0 +1,5 @@
+std = "roblox"
+
+[lints]
+# the codebase deliberately shadows helper names in nested scopes
+shadowing = "allow"

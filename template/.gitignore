@@ -1,0 +1,16 @@
+# Roblox place files (the map lives in Studio, not in git)
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+*.rbxl.lock
+
+# Rojo
+/Packages
+sourcemap.json
+build.rbxl
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
