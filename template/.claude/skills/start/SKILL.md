@@ -15,10 +15,10 @@ Go one step at a time. Do everything you can yourself; for each thing only they 
    - Double-click `1-SETUP.bat` again, then quit and reopen the Claude app, and type `/start` again.
 
 ## Part B: make the place and connect it
-**If `IMPORT-FIRST.md` exists, the game already exists in Studio:** skip steps 3 and 6. Ask them to open the game in Studio (from Roblox, not a file), make sure step 4 (API access) is on, then follow `IMPORT-FIRST.md` completely (it includes connecting Rojo). Then go to Part C.
+**If `IMPORT-FIRST.md` exists, the game already exists in Studio:** skip steps 3 and 6. Ask them to open the game in Studio (from Roblox, not a file), try step 4 (API access, optional: never block on it), then follow `IMPORT-FIRST.md` completely (it includes connecting Rojo). Then go to Part C.
 
 3. Ask them to make the place: in Studio, **New > Baseplate**. Then **File > Publish to Roblox**, create a new game, and give it their game's name. (Publishing once is needed so saving works.)
-4. Ask them to turn on saving in Studio: **Home > Game Settings > Security > Enable Studio Access to API Services > Save**.
+4. **Optional, never block on it:** saving during Studio playtests needs API access. Tell them: **File > Game Settings** (older Studio: the Game Settings button on the Home tab) **> Security > Enable Studio Access to API Services > Save**. If it's greyed out or they can't find it: the game must be published first (File > Publish to Roblox), and only the game's **owner** can change it (if a friend created the game, the friend flips it). If they're stuck for more than a minute, say "No problem, we'll skip it for now" and carry on; remind them in one line at the end. Everything else works without it.
 5. Start `rojo serve` in the background here. Ask them: **Plugins > Rojo > Connect**. Check with the MCP that `ServerScriptService.GameServer` exists.
 6. Set the Workspace attribute `StudioFreshSave = true`, start a playtest, confirm coins spawn, the coin counter and Upgrades menu show, and the Output has no red errors. Stop play. Tell them to press **Play** themselves and walk into a coin. 🎉 "Your game works! Everything from here is your ideas."
 
